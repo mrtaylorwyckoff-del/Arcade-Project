@@ -1,25 +1,30 @@
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class Movement : MonoBehaviour
+
+public class Playermovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    private Rigidbody2D rb;
-    private Vector2 movementInput;
+    public float moveSpeed;
+    private float _movement;
 
-    public Vector2 CurrentInput => movementInput;
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb2d;
 
-    void Start()
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb2d = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void OnMove(InputValue value)
+    private void Update()
     {
-        movementInput = value.Get<Vector2>();
+        rb2d.linearVelocityX = _movement;
     }
 
-    void Update()
+    public void Move(InputAction.CallbackContext ctx)
     {
-        rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
+        _movement = ctx.ReadValue<Vector2>().x * moveSpeed;
+
+
     }
 }
