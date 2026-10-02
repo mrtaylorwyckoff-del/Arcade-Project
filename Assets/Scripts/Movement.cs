@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Playermovement : MonoBehaviour
 {
-    public float moveSpeed;
+    public float moveSpeed = 10f;
     private float _movement;
 
     private SpriteRenderer spriteRenderer;
