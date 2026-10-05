@@ -1,0 +1,29 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class PlayerHealth : MonoBehaviour
+{
+    public int Health = 3;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        GetComponent<BoxCollider2D>();
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if(Health <= 0)
+        {
+            
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Health -= 1;
+        }
+    }
+}
