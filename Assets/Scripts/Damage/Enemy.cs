@@ -1,8 +1,18 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] TMP_Text scoreText;
     public int health = 3;
+    private int score = 0;
+
+    void Awake()
+    {
+        TextMeshProUGUI ScoreText = GameObject.FindWithTag("Text").GetComponent<TextMeshProUGUI>();
+
+    }
 
     public void TakeDamage(int damageAmount)
     {
@@ -12,6 +22,15 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(transform.parent.gameObject);
+            score++;
+            scoreText.SetText("Enemmies Slain: " + score);
+
+
         }
     }
 }
+
+
+
+
+

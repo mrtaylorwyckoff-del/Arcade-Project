@@ -10,18 +10,40 @@ public class Playermovement : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb2d;
+    private Animator anim;
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
         rb2d.linearVelocityX = _movement;
         rb2d.linearVelocityY = _ymovement;
+
+        if(rb2d.linearVelocityX != 0)
+        {
+            anim.Play("KnightWalk");
+            if(rb2d.linearVelocityX < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            if(rb2d.linearVelocityX > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+        }
+        else
+        {
+            Debug.Log("you still twih");
+            anim.Play("KnightIdle");
+        }
+
     }
+
 
     public void Move(InputAction.CallbackContext ctx)
     {

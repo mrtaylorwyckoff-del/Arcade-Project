@@ -15,12 +15,17 @@ public class PlayerHealth : MonoBehaviour
     {
         if(Health <= 0)
         {
-            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("Death");
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.CompareTag("Sword"))
+        {
+            return;
+        }
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Health -= 1;
