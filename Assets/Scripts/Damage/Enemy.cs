@@ -20,12 +20,10 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log("Enemy took damage! Current health: " + health);
 
         if (health <= 0)
-        {
-            Destroy(transform.parent.gameObject);
+        {  
             score++;
             scoreText.SetText("Enemmies Slain: " + score);
-
-
+            Destroy(transform.parent.gameObject);
         }
     }
 }

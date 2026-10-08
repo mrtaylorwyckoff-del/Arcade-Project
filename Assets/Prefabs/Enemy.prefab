@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a4aaf898ed8b042b4e829a2b17d892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  scoreText: {fileID: 6214344942305767793, guid: 767b8c1a372a06741b0d42e7e879db1e, type: 3}
   health: 3
 --- !u!1 &2187861328446203960
 GameObject:
@@ -271,4 +272,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: AstarPathfindingProject::Pathfinding.AIDestinationSetter
   version: 1
-  target: {fileID: 0}
+  target: {fileID: 6005067769872388113, guid: 0820bee03a22bdd4ea832b46b0cef047, type: 3}
