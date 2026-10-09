@@ -11,7 +11,6 @@ public class EnemyHealth : MonoBehaviour
     void Awake()
     {
         TextMeshProUGUI ScoreText = GameObject.FindWithTag("Text").GetComponent<TextMeshProUGUI>();
-
     }
 
     public void TakeDamage(int damageAmount)
@@ -22,13 +21,8 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {  
             score++;
-            scoreText.SetText("Enemmies Slain: " + score);
+            scoreText.SetText("Enemies Slain: " + score);
             Destroy(transform.parent.gameObject);
         }
     }
 }
-
-
-
-
-

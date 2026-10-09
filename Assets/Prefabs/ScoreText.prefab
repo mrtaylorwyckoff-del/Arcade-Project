@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Enemies Slain: 1'
+  m_text: 'Enemies Slain: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 863399293d997324b9675a8e70ceb886, type: 2}
   m_sharedMaterial: {fileID: 6598528288908394380, guid: 863399293d997324b9675a8e70ceb886, type: 2}

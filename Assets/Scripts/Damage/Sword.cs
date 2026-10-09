@@ -17,7 +17,6 @@ public class Sword : MonoBehaviour
             enemy.TakeDamage(damage);
 
             score++;
-
             scoreText.SetText("Enemies Slain: " + score);
         }
     }

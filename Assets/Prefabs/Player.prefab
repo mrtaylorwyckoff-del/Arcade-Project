@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48107356ae1339847b7d4ace5b4c036a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  Health: 100
+  Health: 10000
 --- !u!95 &6351489682073963581
 Animator:
   serializedVersion: 7
@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 388527249199151596}
   - component: {fileID: 204682436511231454}
   - component: {fileID: 6294632861892647010}
+  - component: {fileID: 7182225943321472859}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Sword
@@ -540,6 +541,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sword
   damage: 3
+  scoreText: {fileID: 0}
+--- !u!50 &7182225943321472859
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213927858906960435}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3483173894396686363
 GameObject:
   m_ObjectHideFlags: 0
